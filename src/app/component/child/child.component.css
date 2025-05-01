@@ -1,0 +1,47 @@
+.form-model{
+  display: flex;
+  width: 500px;
+  padding: 20px;
+  gap: 40px;
+}
+
+.form-model form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-model form .form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-model form .form-group input{
+  border-radius: 10px;
+  height: 35px;
+  border: 1px solid #dfdfdf;
+  padding: 0 10px;
+}
+
+.form-model form .footer button{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.form-group{
+  position: relative;
+}
+
+.error{
+  color: rgb(241, 119, 119);
+  position: absolute;
+  right: -60%;
+  bottom: 0;
+}

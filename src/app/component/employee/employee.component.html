@@ -1,0 +1,37 @@
+<h2>Employee Records</h2>
+<table>
+  <thead>
+    <tr>
+      <th>S.no</th>
+      <th>Name</th>
+      <th>Emp ID</th>
+      <th>Age</th>
+      <th>Department</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.id}}</td>
+      <td>{{emp.age}}</td>
+      <td>{{emp.department}}</td>
+      <td>{{emp.salary | currency: "INR"}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="emp-routing">
+  <button (click)="handleTabs('1')">Add Employee</button>
+  <button (click)="handleTabs('2')">Get Employee</button>
+  <button (click)="handleTabs('3')">Update Employee</button>
+  <button (click)="handleTabs('4')">Delete Employee</button>
+</div>
+
+<div class="tabs" [ngSwitch]="tabId">
+  <app-add-employee *ngSwitchCase="'1'" (employeeList)="handleEmployeeList($event)"></app-add-employee>
+  <app-get-employee *ngSwitchCase="'2'" (employeeList)="handleEmployeeList($event)"></app-get-employee>
+  <app-update-employee *ngSwitchCase="'3'" (updatedList)="handleEmployeeList($event)"></app-update-employee>
+  <app-delete-employee *ngSwitchCase="'4'" (deletedList)="handleEmployeeList($event)"></app-delete-employee>
+</div>

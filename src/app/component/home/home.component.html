@@ -1,0 +1,15 @@
+<h1>Home</h1>
+
+<app-play-ground inputMessage="Welcome to angular" [fruits]="fruitList">
+  <div class="fruits">
+    <p>Fruit List</p>
+    <label>Enter fruit name : </label>
+    <input type="text" #fruitName>
+    <button (click) = "addFruit(fruitName.value)">Add fruit</button>
+    <ul>
+      <li *ngFor = "let fruit of fruitList">
+        {{fruit}}
+      </li>
+    </ul>
+  </div>
+</app-play-ground>

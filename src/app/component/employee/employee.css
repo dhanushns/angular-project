@@ -1,0 +1,58 @@
+.add-employee, .update-employee, .delete-employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+}
+
+.add-employee form, .update-employee form, .emp-details{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  .form-group{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    input{
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid #dfdfdd;
+    }
+  }
+  .footer{
+    button{
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: #4f40f0;
+      color: #ffff;
+    }
+  }
+}
+
+.error{
+  position: absolute;
+  right: -25%;
+  font-size: 10px;
+  color: red;
+}
+
+.result{
+  text-align: center;
+}
+
+.get-emp{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  input, button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #dfdfdd;
+  }
+}

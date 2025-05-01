@@ -1,0 +1,11 @@
+<div class="playground">
+  <h2>PlayGround Initialized</h2>
+  <p>Input message from parent : {{inputMessage}}</p>
+</div>
+
+<div>
+  <label>Enter amount in USD </label><input type="number" [(ngModel)] = "usdAmount"/>
+</div>
+
+<app-currency-converter [amount]="usdAmount"></app-currency-converter>
+<ng-content></ng-content>

@@ -1,0 +1,25 @@
+<div class="update-employee">
+  <h3>Get Employee Details</h3>
+  <div class="get-emp">
+    <input type="text" required placeholder="Employee id" [(ngModel)]="empId"/>
+    <button (click)="fetchEmployee()">Search</button>
+  </div>
+  <div class="emp-details" *ngIf="showEmployee">
+    <div class="form-group g2">
+      <label>Employee Name : </label>
+      <label type="text" name="name">{{employee.id}}</label>
+    </div>
+    <div class="form-group g3">
+      <label>Employee Age : </label>
+      <label type="number" name="age">{{employee.age}}</label>
+    </div>
+    <div class="form-group g4">
+      <label>Employee Department : </label>
+      <label type="text" required name="department">{{employee.department}}</label>
+    </div>
+    <div class="form-group g5">
+      <label>Employee Salary : </label>
+      <label type="number" required name="salary">{{employee.salary}}</label>
+    </div>
+  </div>
+</div>
