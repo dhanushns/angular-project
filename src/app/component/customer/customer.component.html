@@ -1,0 +1,16 @@
+<h2>NgRx implementation</h2>
+
+<div class="customer-comp">
+  <div class="left">
+    <p>List of Customers</p>
+    <ul>
+      <li *ngFor="let customer of customers$ | async">
+        {{ customer.name }}
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <input type="text" name="customer" #customer>
+    <button (click) = "addCustomer(customer.value)">Add customer</button>
+  </div> 
+</div>

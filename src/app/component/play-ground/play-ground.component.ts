@@ -17,7 +17,7 @@ import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-play-ground',
-  imports: [CurrencyConverterComponent, CommonModule, FormsModule, ChildComponent],
+  imports: [CurrencyConverterComponent, CommonModule, FormsModule],
   templateUrl: './play-ground.component.html',
   styleUrl: './play-ground.component.css',
   standalone: true,

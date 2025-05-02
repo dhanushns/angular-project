@@ -4,10 +4,7 @@ import { PlayGroundComponent } from './component/play-ground/play-ground.compone
 import { CurrencyConverterComponent } from './component/currency-converter/currency-converter.component';
 import { ChildComponent } from './component/child/child.component';
 import { EmployeeComponent } from './component/employee/employee.component';
-import { AddEmployeeComponent } from './component/employee/add-employee/add-employee.component';
-import { GetEmployeeComponent } from './component/employee/get-employee/get-employee.component';
-import { UpdateEmployeeComponent } from './component/employee/update-employee/update-employee.component';
-import { DeleteEmployeeComponent } from './component/employee/delete-employee/delete-employee.component';
+import { CustomerComponent } from './component/customer/customer.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,11 +14,9 @@ export const routes: Routes = [
   {
     path: 'employee',
     component: EmployeeComponent,
-    children: [
-      { path: 'add-employee', component: AddEmployeeComponent },
-      { path: 'get-employee', component: GetEmployeeComponent },
-      { path: 'update-employee', component: UpdateEmployeeComponent },
-      { path: 'delete-employee', component: DeleteEmployeeComponent },
-    ],
   },
+  {
+    path: 'customer',
+    component: CustomerComponent
+  }
 ];
