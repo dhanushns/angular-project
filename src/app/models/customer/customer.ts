@@ -1,5 +1,3 @@
 export class Customer {
-
-    name: string = '';
-
+  name: string = ''
 }

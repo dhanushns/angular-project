@@ -1,0 +1,28 @@
+<div class="delete-employee">
+  <h3>Delet Employee Details</h3>
+  <div class="get-emp">
+    <input type="number" required placeholder="Employee id" #empId/>
+    <button (click)="deleteEmployee(empId.value)">Delete</button>
+  </div>
+  <div class="result" *ngIf="isDeleted">
+    <h2>Employee Deleted Successfully</h2>
+    <div class="emp-details">
+      <div class="form-group g2">
+        <label>Employee Name : </label>
+        <label type="text" name="name">{{(employee$ | async)?.name}}</label>
+      </div>
+      <div class="form-group g3">
+        <label>Employee Age : </label>
+        <label type="number" name="age">{{(employee$ | async)?.age}}</label>
+      </div>
+      <div class="form-group g4">
+        <label>Employee Department : </label>
+        <label type="text" required name="department">{{(employee$ | async)?.department}}</label>
+      </div>
+      <div class="form-group g5">
+        <label>Employee Salary : </label>
+        <label type="number" required name="salary">{{(employee$ | async)?.salary}}</label>
+      </div>
+    </div>
+  </div>
+</div>

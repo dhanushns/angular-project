@@ -1,32 +1,20 @@
 import { isDevMode } from '@angular/core';
 import {
- createReducer,
- MetaReducer,
- on,
+  ActionReducer,
+  ActionReducerMap,
+  createFeatureSelector,
+  createSelector,
+  MetaReducer
 } from '@ngrx/store';
-import { Customer } from '../models/customer';
-import { AddCustomer } from '../customer/store/action/customer.action';
 
 
-export const customerFeatureKey = "customer";
+export interface State {
 
-export interface CustomerState{
- customers: Customer[]
 }
 
-export const initialState: CustomerState = {
- customers:[] = []
-}
+export const reducers: ActionReducerMap<State> = {
 
-export const customerReducer = createReducer(
- initialState,
- on(AddCustomer,(state:CustomerState, {customer})=>(
- {
- ...state,
- customers: [...state.customers,customer]
- }
- )),
-)
+};
 
 
-export const metaReducers: MetaReducer<CustomerState>[] = isDevMode() ? [] : [];
+export const metaReducers: MetaReducer<State>[] = isDevMode() ? [] : [];
