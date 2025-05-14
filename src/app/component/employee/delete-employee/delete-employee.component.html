@@ -1,7 +1,7 @@
 <div class="delete-employee">
   <h3>Delet Employee Details</h3>
   <div class="get-emp">
-    <input type="number" required placeholder="Employee id" [(ngModel)]="empId"/>
+    <input type="text" required placeholder="Employee id" [(ngModel)]="empId"/>
     <button (click)="deleteEmployee()">Delete</button>
   </div>
   <div class="result" *ngIf="showEmployee">

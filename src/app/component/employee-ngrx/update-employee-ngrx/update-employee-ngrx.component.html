@@ -1,7 +1,7 @@
 <div class="update-employee" *ngIf="!isUpdated">
   <h3>Update Employee</h3>
   <div class="get-emp">
-    <input type="number" required placeholder="Employee id" #empId/>
+    <input type="text" required placeholder="Employee id" #empId/>
     <button (click)="fetchEmployee(empId.value)">Search</button>
   </div>
   <form #empForm="ngForm" class="emp-form" (ngSubmit)="updateEmployee()" *ngIf="showEmployee">
